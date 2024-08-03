@@ -98,6 +98,7 @@ func ReadPasswordsFromFile(filename string) ([]string, error) {
 
 func GetUsersFromDefaultWordlist(version string, serviceType string) []string {
 	wordlistPath := filepath.Join("wordlist", serviceType, "user")
+	version = "main"
 	url := fmt.Sprintf("https://raw.githubusercontent.com/x90skysn3k/brutespray/%s/wordlist/%s/user", version, serviceType)
 
 	globalWordlistPath := filepath.Join("/usr/share/brutespray/wordlist", serviceType, "user")
@@ -151,6 +152,7 @@ func GetUsersFromDefaultWordlist(version string, serviceType string) []string {
 
 func GetPasswordsFromDefaultWordlist(version string, serviceType string) []string {
 	wordlistPath := filepath.Join("wordlist", serviceType, "password")
+	version = "main"
 	url := fmt.Sprintf("https://raw.githubusercontent.com/x90skysn3k/brutespray/%s/wordlist/%s/password", version, serviceType)
 
 	globalWordlistPath := filepath.Join("/usr/share/brutespray/wordlist", serviceType, "password")

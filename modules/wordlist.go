@@ -100,7 +100,7 @@ func GetUsersFromDefaultWordlist(version string, serviceType string) []string {
 	wordlistPath := filepath.Join("wordlist", serviceType, "user")
 	version = "main"
 	url := fmt.Sprintf("https://raw.githubusercontent.com/x90skysn3k/brutespray/%s/wordlist/%s/user", version, serviceType)
-
+	fmt.Println(url)
 	globalWordlistPath := filepath.Join("/usr/share/brutespray/wordlist", serviceType, "user")
 
 	if _, err := os.Stat(globalWordlistPath); !os.IsNotExist(err) {
